@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços Precificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fundo">
+    <main>
+        <section id="section01">
+            <div id="box1">
+                <h1 class="fitasH1_adrH1">Fitas:</h1>
+                <p>
+                    Valor metro: <br>
+                    <input type="number" id="valorMetro">
+                </p>
+                <p>
+                    Quantidade: <br>
+                    <input type="number" id="quantFita">
+                </p>
+                <button onclick="adicionarF()">Adicionar</button> <br>
+                <select id="res_fita" size="4"></select>
+            </div>
+            <div id="box2">
+               <h1 class="fitasH1_adrH1">Adereços:</h1>
+               <p>
+                   Preço do adereço: <br>
+                   <input type="number" id="adr_valor">
+               </p>
+               <p>
+                   Quantidade: <br>
+                   <input type="number" id="adrQuant">
+               </p>
+               <button onclick="adicionarA()">Adicionar</button> <br>
+                <select id="res_adr" size="4"></select>
+            </div>
+        </section>
+        <section id="section02">
+            <h1 style="margin-bottom: 15px;">Calculando o seu tempo:</h1>
+            <section id="allBox">
+                <div id="box3">
+                    <p>
+                        Horas por dia: <br>
+                        <input type="number" id="horasDia">
+                    </p>
+                    <p>
+                        Salário: <br>
+                        <input type="number" id="sal">
+                    </p>
+                    <p>
+                        Porcentagem: <br>
+                        <input type="number" id="porcem">
+                    </p>
+                </div>
+                <div id="box4">
+                    <p>
+                        Dias do mês: <br>
+                        <input type="number" id="diaMes">
+                    </p>
+                    <p>
+                        Peça/Minutos: <br>
+                        <input type="number" id="pecaMinutos">
+                    </p>
+                </div>
+            </section>
+            <section id="section03">
+                <div>
+                    <div id="calcButton" onclick="calcular()">Calcular</div>
+                </div>
+                <div id="res">
+                    <strong>Preço:</strong>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
