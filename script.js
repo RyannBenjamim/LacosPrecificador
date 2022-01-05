@@ -24,6 +24,9 @@ function adicionarF() {
         item.text += `Fita ${contf}: ${gasto_fita} $ Reais`
         res_fita.appendChild(item) 
     }
+    metro_fita.value = ""
+    quant_fita.value = ""
+    metro_fita.focus()
 }
 
 // Adicionando valores na lista de adereços
@@ -41,6 +44,9 @@ function adicionarA() {
         item.text += `Adr ${conta}: ${gasto_adr} $ Reais`
         res_adr.appendChild(item)
     }
+    adr_valor.value = ""
+    adrQuant.value = ""
+    adr_valor.focus()
 }
 
 function calcular() {
@@ -74,12 +80,10 @@ function calcular() {
 
             res.innerHTML = `<strong>Preço: ${preco_final.toFixed(2)} $</strong>`
         }
-}
-
-function noturno() {
-    fundo.style.background = "#181818"
-}
-
-function manha() {
-    fundo.style.background = "#FA94C4"
+        // Apagando os valores digitados
+        metro_fita.value = ""
+        quant_fita.value = ""
+        adr_valor.value = ""
+        adrQuant.value = ""
+        metro_fita.focus()
 }
