@@ -80,6 +80,7 @@ function calcular() {
         quant_fita.value = ""
         adr_valor.value = ""
         adrQuant.value = ""
+        minutos.value = ""
         // Limpando os elementos necessários
         res_fita.innerHTML = ""
         res_adr.innerHTML = ""
