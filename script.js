@@ -80,7 +80,6 @@ function calcular() {
         quant_fita.value = ""
         adr_valor.value = ""
         adrQuant.value = ""
-        metro_fita.focus()
         // Limpando os elementos necessários
         res_fita.innerHTML = ""
         res_adr.innerHTML = ""
