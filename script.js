@@ -1,4 +1,3 @@
-let fundo = document.getElementById("fundo")
 let res = document.getElementById("res")
 // Fita elementos
 let res_fita = document.getElementById("res_fita")
@@ -20,9 +19,7 @@ function adicionarF() {
         fitas.push(gasto_fita)
     
         contf++
-        let item = document.createElement("option")
-        item.text += `Fita ${contf}: ${gasto_fita} $ Reais`
-        res_fita.appendChild(item) 
+        res_fita.innerHTML += `Fita ${contf}: ${gasto_fita} $ Reais \n`
     }
     metro_fita.value = ""
     quant_fita.value = ""
@@ -40,9 +37,7 @@ function adicionarA() {
         aderecos.push(gasto_adr)
 
         conta++
-        let item =  document.createElement("option")
-        item.text += `Adr ${conta}: ${gasto_adr} $ Reais`
-        res_adr.appendChild(item)
+        res_adr.innerHTML += `Adr ${conta}: ${gasto_adr} $ Reais \n`
     }
     adr_valor.value = ""
     adrQuant.value = ""
@@ -71,14 +66,14 @@ function calcular() {
     }
 
     if (horasDia.value.length == 0 || salario.value.length == 0 || porcem.value.length == 0 ||
-        diasMes.value.length == 0 || minutos.value.length == 0 || fitas.length == 0 || aderecos.length == 0) {
+        diasMes.value.length == 0 || minutos.value.length == 0) {
             alert("[ERRO] Não podemos finalizar o cálculo, porque você não terminou de digitar os valores.")
         } else {
             let preco_total = soma_fitas + soma_adere + energia + gasto_cola + valor_hora
             let porcentagem = (preco_total * Number(porcem.value)) / 100
             let preco_final = preco_total + porcentagem
 
-            res.innerHTML = `<strong>Preço: ${preco_final.toFixed(2)} $</strong>`
+            res.innerHTML = `<strong>Preço: ${preco_final.toFixed(2)}$</strong>`
         }
         // Apagando os valores digitados
         metro_fita.value = ""
@@ -86,4 +81,11 @@ function calcular() {
         adr_valor.value = ""
         adrQuant.value = ""
         metro_fita.focus()
+        // Limpando os elementos necessários
+        res_fita.innerHTML = ""
+        res_adr.innerHTML = ""
+        fitas = []
+        aderecos = []
+        contf = 0
+        conta = 0
 }
