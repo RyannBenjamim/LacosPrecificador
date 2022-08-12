@@ -77,10 +77,8 @@ function calcular() {
             let preco_final = preco_total + porcentagem
 
             if (Number(desconto.value) == 0) {
-                alert("sem desconto");
                 res.innerHTML = `<strong>Preço: ${preco_final.toFixed(2)}$</strong>`
             } else {
-                alert("com desconto");
                 // Calculando desconto
                 let descontoValor = (Number(desconto.value) * preco_final) / 100;
                 let preco_final2 = preco_final - descontoValor;
