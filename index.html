@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços Precificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="fundo">
+    <p id="samiaLacos">Sâmia Laços</p>
+    <main>
+        <div class="div1">
+            <section id="section01">
+                <div id="box1">
+                    <h1 class="fitasH1_adrH1">Fitas:</h1>
+                    <p>
+                        Valor metro: <br>
+                        <input type="number" id="valorMetro">
+                    </p>
+                    <p>
+                        Quantidade: <br>
+                        <input type="number" id="quantFita">
+                    </p>
+                    <button onclick="adicionarF()">Adicionar</button> <br>
+                    <textarea id="res_fita"></textarea>
+                </div>
+                <div id="box2">
+                   <h1 class="fitasH1_adrH1">Adereços:</h1>
+                   <p>
+                       Preço do adereço: <br>
+                       <input type="number" id="adr_valor">
+                   </p>
+                   <p>
+                       Quantidade: <br>
+                       <input type="number" id="adrQuant">
+                   </p>
+                   <button onclick="adicionarA()">Adicionar</button> <br>
+                    <textarea id="res_adr"></textarea>
+                </div>
+            </section>
+            <section id="section02">
+                <h1 style="margin-bottom: 15px;">Calculando o seu tempo:</h1>
+                <section id="allBox">
+                    <div id="box3">
+                        <p>
+                            Horas por dia: <br>
+                            <input type="number" id="horasDia">
+                        </p>
+                        <p>
+                            Salário: <br>
+                            <input type="number" id="sal">
+                        </p>
+                        <p>
+                            Porcentagem: <br>
+                            <input type="number" id="porcem">
+                        </p>
+                    </div>
+                    <div id="box4">
+                        <p>
+                            Dias do mês: <br>
+                            <input type="number" id="diaMes">
+                        </p>
+                        <p>
+                            Peça/Minutos: <br>
+                            <input type="number" id="pecaMinutos">
+                        </p>
+                    </div>
+                </section>
+
+                <section id="desconto">
+                    <h1>Desconto:</h1>
+                    <section id="allBox">
+                        <p>
+                            Porcentagem:
+                            <input type="number" value="0" id="descontoValue" placeholder="Opcional">
+                        </p>
+                    </section>
+                </section>
+
+                <section id="section03">
+                    <div>
+                        <div id="calcButton" onclick="calcular()">Calcular</div>
+                    </div>
+                    <div id="res">
+                        <strong>Preço:</strong>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <div class="mensagem">
+        <p>OBS -> <strong>Esse código se encontra extremamente quebrado, uma nova versão entrará em desenvolvimento.</strong></p>
+        <p id="by">by - &copy; The Ryan Company</p>
+    </div>
+    <p id="credits">&copy; RyanCosta</p>
+    <script src="script.js"></script>
+</body>
+</html>
